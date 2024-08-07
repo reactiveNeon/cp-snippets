@@ -8,6 +8,8 @@ void dbg_out() { cout << endl; }
 template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T) { cout << ' ' << H; dbg_out(T...); }
 #define DBG(...) cout << '[' << (__LINE__ - 9) << "] (" << #__VA_ARGS__ << "):", dbg_out(__VA_ARGS__)
 #define RANGE(x) (x).begin(), (x).end()
+#define MP make_pair
+#define PII pair<int, int>
 using i32 = int32_t;
 using i64 = int64_t;
 using u32 = uint32_t;
