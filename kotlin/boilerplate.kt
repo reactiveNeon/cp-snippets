@@ -1,4 +1,4 @@
-var DEBUG = ture
+var DEBUG = true
 fun dbg(vararg args: Any?) { if(!DEBUG) return; val line = Throwable().stackTrace[1].lineNumber; var i = 1; println("[$line] " + args.joinToString("  ") { if (it is Pair<*, *>) "${it.first}: ${format(it.second)}" else "_${i++}: ${format(it)}" }) }
 fun format(x: Any?): String = when (x) {
     is Pair<*, *> -> "(${format(x.first)}, ${format(x.second)})"
