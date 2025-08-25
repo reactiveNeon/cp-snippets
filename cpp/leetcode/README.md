@@ -4,16 +4,22 @@ Inspired by [neal](https://codeforces.com/profile/neal) from codeforces
 
 ## Features
 
+### Stream operators
+- `pair<U,V>`, `tuple<T, ...>`
+- standard containers `{x1, x2, x3, ...}`
+
 ### Debug Printing Macro (`DBG`)
 - Prints the line numbers, variable names and values `[line number] (<variable names>): <values>`
 - Works for basic types, STL containers, pair, and tuple
-- Enabled when DEBUG is defined, otherwise compiles to no-op
+- Enabled when `DEBUG` macro is defined, otherwise compiles to no-op
 
 ```cpp
+#define DEBUG
+
 vector<int> v = {1, 2, 3};
 pair<int, int> p = {4, 5};
 DBG(v, p);  
-// Output (line numbers may vary):
+// Output (here [23] is the line number for example):
 // [23] (v, p): {1, 2, 3} (4, 5)
 ```
 
@@ -38,10 +44,6 @@ smin(x, 3, []() {
 ```cpp
 int val = clamp(15, 0, 10);  // val = 10
 ```
-
-### Stream operators
-- for `pair<U,V>`, `tuple<T, ...>`
-- containers `{x1, x2, x3, ...}`
 
 ### Type Alias
 ```cpp
